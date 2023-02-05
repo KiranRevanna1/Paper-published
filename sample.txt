@@ -1,0 +1,479 @@
+\documentclass[conference]{IEEEtran}
+
+
+  	\usepackage[pdftex]{graphicx}
+  	\graphicspath{{../pdf/}{../jpeg/}}
+	\DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+
+	\usepackage[cmex10]{amsmath}
+	\usepackage{mathabx}
+	\usepackage{algorithmic}
+	\usepackage{array}
+	\usepackage{mdwmath}
+	\usepackage{mdwtab}
+	\usepackage{eqparbox}
+	\usepackage{url}
+	\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{\LARGE Literature Review of Breast Cancer Detection using Machine Learning Techniques   }
+
+\makeatletter
+\newcommand{\linebreakand}{%
+  \end{@IEEEauthorhalign}
+  \hfill\mbox{}\par
+  \mbox{}\hfill\begin{@IEEEauthorhalign}
+}
+\makeatother
+
+\author{
+  \IEEEauthorblockN{Mrs. Annapoorna B R }
+  \IEEEauthorblockA{\textit{Department of Computer Science} \\
+    \textit{Dayananda Sagar College of}\\ Engineering \\
+    Bangalore, India\\
+    annapoorna-cs@dayanandasagar.edu}
+  \and
+  \IEEEauthorblockN{ Kota V Vishnu}
+  \IEEEauthorblockA{\textit{Department of Computer Science} \\
+    \textit{Dayananda Sagar College of}\\ Engineering \\
+    Bangalore, India \\
+   kotavishnu2000@gmail.com }
+  \and
+  \IEEEauthorblockN{Reena Jasmine Edwin}
+  \IEEEauthorblockA{\textit{Department of Computer Science} \\
+    \textit{Dayananda Sagar College of}\\ Engineering \\
+    Bangalore, India \\
+    reenajasmineedwin2@gmail.com}
+  \linebreakand % <------------- \and with a line-break
+  \IEEEauthorblockN{S Sai Brinda}
+  \IEEEauthorblockA{\textit{Department of Computer Science} \\
+    \textit{Dayananda Sagar College of}\\ Engineering \\
+    Bangalore, India \\
+    saibrinda.23@gmail.com}
+  \and
+  \IEEEauthorblockN{\textsuperscript{} Shalini Singh}
+  \IEEEauthorblockA{\textit{Department of Computer Science} \\
+    \textit{Dayananda Sagar College of}\\ Engineering \\
+   Bangalore, India \\
+    shalinisingh.munger@gmail.com}
+}
+
+
+
+\maketitle
+
+\begin{abstract}
+Breast cancer is the most frequent cancer in women worldwide and is also the most lethal. The reasons for this illness are many and challenging to identify. Furthermore, the diagnostic technique, which determines whether the cancer is benign or malignant, requires substantial work from doctors and physicians.
+When several tests, such as clump thickness, uniformity of cell size, uniformity of cell shape, and so on, are employed to identify breast cancer, the final result may be difficult to get, even for medical professionals.
+ As a result, in recent years, there has been a surge in the use of machine learning and Artificial Intelligence in general as diagnostic tools. ML seeks to make computer self-learning easier. Rather than depending on explicit pre-programmed rules and models, it is based on finding patterns in observed data and creating models to predict outcomes and evaluate them on performance measure features like accuracy, precision, and recall. 
+The primary purpose of this review is to highlight all the previous studies of machine learning algorithms being used for breast cancer prediction. This article will be helpful to the researchers due to the detailed analysis of different methodologies and in conducting further investigations.
+\end{abstract}
+
+\IEEEoverridecommandlockouts
+\begin{keywords}
+Breast Cancer, Medical Diagnosis, Machine Learning, KNN, Decision Tree, SVM, Random Forest, Logistic Regression, Naive Bayes.
+\end{keywords}
+
+\IEEEpeerreviewmaketitle
+
+
+% ===================
+% # I. Introduction #
+% ===================
+
+\section{Introduction}
+One of the leading causes of death for women worldwide is breast cancer. Out of the 10 million occurrences of cancer, breast cancer caused 2.26 million deaths worldwide in 2020, according to the World Health Organization. Breast
+
+When cells in the breast start to grow out of control, cancer develops. Tumors are these collections of cells, and they may frequently be seen on an x-ray or felt as a lump. When cancer cells enter the blood or lymph system and are transported to other regions of the body, making them susceptible to cancer, breast cancer can spread. The two most prevalent kinds of breast cancer are invasive carcinoma and ductal carcinoma in situ (DCIS). 
+Fatigue, headaches, pain and numbness (peripheral neuropathy), bone loss, and osteoporosis are some of the adverse effects of breast cancer. Tumors come in two varieties. One is benign, meaning it isn't cancerous, and the other is malignant, meaning it is.
+In the modern society, early sickness detection is essential. As the population increases, there is an exponential increase in the likelihood of dying from breast cancer. Breast cancer is the most common and most deadly cancer in women worldwide. There are several, elusive causes for this condition. Furthermore, it takes a lot of effort on the part of doctors and medical professionals to perform the diagnostic procedure that establishes whether the cancer is benign or malignant.
+
+When many tests, such as homogeneity and clump thickness and cell uniformity is used to determine its potency.
+As a result, the use of machine learning and all forms of artificial intelligence as diagnostic tools has increased recently. ML aims to simplify computer self-learning. It is based on identifying patterns in observed data and building models to anticipate outcomes and evaluating them on performance measure aspects like accuracy, precision, and recall rather than relying on explicit pre-programmed rules and models.
+This study aims to provide a variety of methodologies for studying the usage of various machine learning (ML)-based algorithms for early breast cancer diagnosis using the Wisconsin breast cancer dataset.
+We'll look at and contrast the machine learning methods used for classification, including Naive Bayes (NB), K-Nearest Neighbor (KNN), and Logistic Regression (LR),Random Forest (RF), Support Vector Machine (SVM), and 
+Decision Tree (DT), for computing accuracy in terms of performance metrics 
+such as recall, precision F1 score, and accuracy percentage. 
+
+
+% =======================================================
+% #Literature Survey
+% =======================================================
+
+\section{Literature Survey}
+[1]\emph{ Nur Syami, Ismael,C. Sovuthy 
+"Breast Cancer Detection Using Deep Learning"}
+
+The authors have used VGG16 and Resnet50 models to classify between normal and abnormal cancer tumours. Data taken from the IRMA dataset is processed and resized before getting evaluated.
+The CNN consisting of several layers is used to pool,flatten and sample test cases to test contours and ridges formed. VGG16 is used when high computational requirements are needed  whilst Resnet is used for skip connection to pass input to the subsequent layers of the model.
+The VGG16 and Resnet provide an accuracy and precision F1 score of over 85 percent.
+
+
+[2]\emph{ Hajer Kamel, Dhahir Abdulah,Jamal M.Al-Tuwaijari  
+"Cancer Classification Using Gaussian Naive Bayes Algorithm" }
+
+The authors have used Naive Bayes Algorithm Classifiers to segregate the data with minimum amount of training required. The data is classified based on it`s class, variable and attribute name.
+The correspondence to each supposition in the data is allocated with respect to Gaussian distribution with mean and standard deviation analyzed.
+The data collected from this analysis is subjected to confusion matrices to check for True Positive,True Negative,False Positive,False Negative values to measure accuracy and F1 Scores.
+Naive Bayes Algorithm produces a score of 98 percent using this method.
+
+
+
+[3]\emph{ Megha Rathi, Arun Kumar Singh
+"Breast Cancer Prediction using Naïve Bayes Classifier"}
+
+The authors use WEKA to analyze data from the UCL ML repository to predict the condition of Breast Cancer in a tumour scan.
+Several factors like cell size, shape , nucleoli, Clump Thickness, Marginal Adhesion is considered before coming to a conclusion.
+Naive Bayes uses Gaussian Distribution to cluster the data based on the results obtained.
+Using WEKA along with Naive Bayes yields an accuracy of 94.08 percent after segmenting the results into benign and malignant clusters.
+
+[4]\emph{ Tawseef Ayoub Shaikh , Rashid Ali
+"A CAD Tool for Breast Cancer Prediction using Naive Bayes Classifier"}
+
+
+The authors use Naive Bayes Classifier algorithms to analyze and sort Image Mammography scan results to Proportional k-Interval Discretization (PKID) and DISCRETIZE filters.
+PKID Filters allow doctors to sort the scan results based on the data received from the tests conducted after sorting through itemised test cases.
+A confusion matrix is used to classify the results into benign and malignant which gives an accurate measure of the True Positive,True Negative,False Positive,False Negative values.
+This method gives an accuracy and F1 score of 74 percent.
+
+
+[5]\emph{Shubham Sharma,  Archit Aggarwal, Tanupriya Choudhury 
+"Breast Cancer Detection Using Machine Learning Algorithms"}
+
+The authors have used various algorithms like Randomn Forest, kNN (k-Nearest-Neighbor) and Naive Bayes to distinguish between instances and attributes in various Mammogram scans. Linear Discriminant Analysis is used for feature selection to train the model using fuzzy interference.
+The algorithms used to train and test the model are divided into supervised and unsupervised methods and ranked according to factors like Time Complexity and Model Parameters.
+Random Forest , Naive Bayes and kNN algorithms all display accuracy and F1 scored greater than 91 percent using this method.
+% =============================================
+% # III. Modeling and consistency validations #
+% =============================================
+
+
+
+[6]\emph{ Than Than Htay,Su Su Maung,"Early Stage Breast Cancer Detection System using GLCM Feature extraction and K-nearest Neighbor on Mammography image,"2018 18th International Symposium on Communications and Information Technologies (ISCIT),IEEE Xplore.}
+
+The aim of the authors[6] is to create an early-stage breast cancer detection system that can automatically categorize anomalies in mammography images acquired from the MIAS (Mammographic Image Analysis Society) database. First the data preprocessing is done using a Median Filter to remove noise, then it is segmented using the OTSU thresholding technique. GLCM, Second Order Texture, is used to extract features.The machine learning algorithm employed is K-Nearest Neighbor.The accuracy score according to this algorithm is 92 percent.The authors of the research want to increase classification accuracy by employing additional best classification methods.
+
+[7]\emph{ Tevar Durgadevi Murugan,Mahendra G.Kanojia,
+"Breast Cancer Detection Using Texture Features and KNN Algorithm,"
+In:HIS 2020-Part of the Advances in Intelligent Systems and Computing book series (AISC,volume 1375),Springer.}
+
+The research work provides in-depth analyses of the technical and usability aspects of histopathological image characteristics and performs breast cancer diagnosis using the Breakhis and breast histopathology image datasets.A well-structured dataset is generated by repeatedly extracting 13 Haralick texture characteristics from each histopathology image.The dataset generated is subjected to dimension reduction techniques like PCA and LDA and split into 70 percent for training and 30 percent for testing.The machine learning technique used to identify breast cancer is K-Nearest Neighbor Classifier. The accuracy score of KNN using LDA was 80.0 percent,which was higher than the accuracy score of KNN using PCA, which was 56.0 percent.If a dataset contains texture features, the approaches suggested by authors may be used to get insights into which factors contribute the most to the target features.
+
+[8]\emph{ Suhas Athani, Shreesha Joshi, B. Ashwath Rao, Shwetha Rai , N. Gopalakrishna Kini,"Parallel Implementation of kNN Algorithm for Breast Cancer Detection,"In:Evolution in Computational Intelligence. Advances in Intelligent Systems and Computing, vol 1176,Springer.}
+
+The authors[8] investigates the use of parallel programming for breast cancer classification and prediction on large datasets such as the Wisconsin Breast Cancer dataset .
+The dataset is used to compute the kNN method both serially and parallelly. The findings are validated by employing frameworks such as Message Passing Interface (MPI)
+and Compute Unified Device Architecture (CUDA), which divide the workload and thus finish the operation in considerably less time. The results highlighted that parallel
+execution consumes less time (almost half) than sequential execution. In the future, authors may plan and put into practice to operate in a parallel setting with less communication overhead.
+
+
+[9]\emph{ Youssef Aamer, Yahya Benkaouz, Mohammed Ouzzif, Khalid Bouragba,
+"A new approach for increasing K-nearest neighbors performance,"
+2020 8th International Conference on Wireless Networks and Mobile Communications (WINCOM),IEEE Xplore.}
+
+
+The authors[9] proposed an improved strategy that eliminates the need for the K value in the KNN algorithm used to diagnose breast cancer while maintaining the same 
+performance and enhancing it for particular datasets since this value affects the algorithm output performance. Instead of employing K values in the KNN algorithm,
+this technique employs a "zone classifier" approach to classification and accuracy maximization. The goal is to build a classification zone for each new data point
+and apply the most often occurring class in the defined zone to this new element. The Zone Classifier technique yields an Accuracy score of 93 percent, Precision score of 
+96.5 percent, and Recall score of 94.74 percent. This strategy eliminates the overhead of the user selecting a K value to provide as input and yields a better result.
+The proposed method was applied for small and medium datasets.In future research, authors intend to improve technique for application on large datasets.
+
+ [10]\emph{ G. D. Rashmi, A. Lekha, Neelam Bawane,
+"Analysis of Efficiency of Classification and Prediction Algorithms (kNN) for Breast Cancer Dataset,"
+In:Information Systems Design and Intelligent Applications.Advances in Intelligent Systems and Computing, vol 434,Springer.}
+
+
+The classification and prediction algorithms are examined by  utilizing information from wisconsin university database to ascertain if breast cancer is
+benign or malignant utilising data mining techniques.The knn classification algorithm and knn prediction algorithms are employed in this paper. Since an .ARFF file
+is used as the application's input ,the file conversion is performed using the Weka interface 3.6 and the experiment was conducted in matlab(matrix laboratory).
+the knn prediction as well as the knn classification algorithms had success rates of 80-90 percent and error rates of 10-15 percent. There is still potential for improvement 
+in the algorithms so they can handle more input combinations and increase success rates.
+
+
+[11]\emph{Sonia Goyal , Maheshwar,
+"Naïve Bayes Model Based Improved K-Nearest Neighbor Classifier for Breast Cancer Prediction,"
+In:Advanced Informatics for Computing Research. ICAICR 2019. Communications in Computer and Information Science, vol 1075,Springer.}
+
+
+The research work describes Naive Bayes improved K-Nearest Neighbor technique (NBKNN) for diagnosing breast cancer on the UCI repository.
+Data cleaning is performed on the input data to eliminate outliers and missing values. Each classifier's effectiveness is evaluated using a 10-fold 
+cross-validation method.Traditional classifiers such as KNN and naive Bayes, as well as the NBKNN algorithm, are employed to predict cancer 
+and compare the findings.The accuracy score achieved by KNN is 96.7 percent, the accuracy score acquired by Naive Bayes is 95.9 percent, and the accuracy score obtained by NBKNN 
+is 97.5 percent. The study shows that the NBKNN approach outperforms other conventional classifiers in terms of performance and that several bio-inspired techniques such 
+as Ant Colony Optimization (ACO) and Particle Swarm Optimization (PSO) may be utilized to optimise the results.
+
+
+[12]\emph{Nur Atiqah Hamzah, Sabariah Saharan , Khuneswari Gopal Pillay
+"Classification Tree of Breast Cancer Data with Mode Value for Missing Data Replacement,"
+In:Proceedings of the 7th International Conference on the Applications of Science and Mathematics 2021,Springer.}
+
+
+The motive of authors[12] is to use decision tree algorithm to develop a classification model for breast cancer with the added notion of preprocessing the input data without
+eliminating the missing values.Breast Cancer data from UCI Machine Learning was used, which included 201 occurrences of one class and 85 instances of another class,
+known as non-recurrence and recurrence classes. The decision tree model is applied to two sets of data, the first being the most often used strategy, in which 
+incomplete readings are eliminated, and the second being missing readings that are replaced with mode for each attribute.The Decision Tree technique uses the 
+GINI index approach to select the parameter as the root node.Data with missing readings deleted obtained an accuracy of 85.2 percent and Data with missing readings replaced
+with mode of data obtained an accuracy of 78.57 percent.
+
+[13]\emph{Hamim, M., El Moudden, I., Moutachaouik, H., Hain, M "Decision Tree Model Based Gene Selection and Classification for Breast Cancer Risk Prediction,"
+In:Smart Applications and Data Analysis.SADASC 2020.Communications in Computer and Information Science, vol 1207,Springer.}
+
+
+
+The authors[13] proposed a breast cancer detection model using microarray breast cancer gene expression data. A hybrid of two feature selection methods, namely the
+Fisher-score-based filter method and the inner feature selection ability of the C5.0 algorithm is applied to reduce the dimensionality of input space by removing any
+irrelevant or noisy genes from the original data. This is employed because the most common problem with gene expression data is its high dimensionality.Artificial
+neural networks, C5.0 Decision Trees, Logistic Regression, and Support Vector Machines are the classification methods that were employed to evaluate the predictive
+accuracy of this strategy. Prior to the application of feature selection, 24481 genes were chosen, with ANN showing a better accuracy rate of 86.99 percent and C5.0 showing 
+the lowest accuracy rate of 79.01 percent. When feature selection is applied,the number of genes chosen was reduced to 5 and all shrinkage models provided classification 
+accuracy greater than 80 percent. The authors intend to test the effectiveness of the suggested strategy using new microarray datasets that have varied qualities in terms of the number of genes, samples, and classes.
+
+
+[14]\emph{ Kriti Jain, Megha Saxena and Shweta Sharma: “Breast Cancer Diagnosis Using Machine Learning Techniques”, IJISET - International Journal of Innovative Science, Engineering & Technology, Vol. 5 Issue 5, May 2018.}
+
+The authors thoroughly examined the expected execution of SVM, K-Nearest Neighbors, Gaussian Naive Bayes, and Classification and Regression trees (CART) On the breast cancer dataset. The Wisconsin Breast Cancer (WBC) dataset was obtained from the UCI Machine Learning Repository, which houses machine learning and insight frameworks. Various classification algorithms' classification accuracy, precision, and F-measure are investigated. The experiment shows that the SVM classifier is a superior choice for classification since the algorithm's performance is enhanced by tuning the dataset's parameters and the risk of overfitting is reduced. The best parameters, on the other hand, are required for accurate categorization.
+
+[15]\emph{ Puneet Yadav, Rajat Varshney, Vishan Kumar Gupta: “Diagnosis of Breast Cancer using Decision Tree Models and SVM”. IJISET - International Journal of Innovative Science, Engineering & Technology, Volume: 05 Issue: 03  Mar-2018 }
+
+The authors of this paper employed two powerful classification algorithms, decision tree and Artificial Neural Network, for breast cancer prediction. Experimental results show that algorithms have effective results for this purpose, with the overall prediction accuracy of the decision tree from 90\% to 94\% and SVM having 94.5\% to 97\%, respectively. It is observed that DTs require little effort for their preparation. However, They are unstable and complex to understand when there are many outcomes.
+
+[16]\emph{ Yixuan Li, Zixuan Chen, 2018: “Performance Evaluation of Machine learning methods for breast cancer prediction”, Science publishing group 2018.}
+
+Yixuan Li et. al.[16] employed the DT, SVM, RF, LR and NN models as the classification to predict the nature of breast cancer with other attributes. 
+The results of the prediction will help to decrease the rate of misdiagnoses and do suitable treatment projects for therapy. 
+In this investigation, two datasets are employed. This study initially gathers raw data from the BCCD dataset, which has 116 participants with nine attributes, and raw data from the WBCD dataset, which contains 699 people with 11 attributes. The raw data from the WBCD dataset was then preprocessed, yielding data including 683 participants with nine characteristics and an index indicating if the volunteer had a malignant tumour. After comparing the accuracy, The F-measure metric and ROC curve of five classification models were used to determine which model should be used as the primary classification model in this investigation.
+It runs efficiently on large databases. However, They are much harder to construct and are time taking. 
+This study only collects the data of 10 attributes in this experiment. The limited raw data affects the accuracy of results. In addition, the RF also can be combined with other data mining technologies to obtain more accurate and efficient results.
+
+[17]\emph{ Thomas Noel, Hiba Asri, Hajar Mousannif, Hassan Al Moatassime, 2016, “Using Machine Learning Algorithms for Breast Cancer Risk Prediction and Diagnosis”, Elsevier B.V. 2016.}
+
+The authors of this research tested the accuracy, precision, sensitivity, and specificity of each algorithm: SVM, NB, k-NN, and C4.5 on the Wisconsin Breast Cancer (original) datasets. According to the experimental data, SVM provides the best accuracy of 97.13\% with the lowest error rate. Because all trials are run in a simulation environment and using the WEKA data mining tool, the risk of overfitting is reduced. The best parameters, on the other hand, are required for proper categorisation.
+
+[18]\emph{ Mohammed Amine Naji , Sanaa El Filalib, Kawtar Aarikac, EL Habib Benlahmard, Rachida Ait Abdelouhahide, Olivier Debauchef “Machine Learning Algorithms For Breast Cancer Prediction And Diagnosis”, Elsevier August 9-12, 2021 }
+
+The authors of this paper have applied five main algorithms, which are: SVM, Random Forests, Logistic Regression, Decision Tree, K-NN, calculate, compare and evaluate different results obtained based on confusion matrix, accuracy, sensitivity, precision, AUC to identify the best machine learning algorithm that is precise, reliable and find the higher accuracy. All algorithms have been programmed in Python using the scikit-learn library in the Anaconda environment. After an accurate comparison between our models, we found that the Support Vector Machine achieved a higher efficiency of 97.2\%, Precision of 97.5\%, and AUC of 96.6\%, outperforming all other algorithms. However, using new parameters on larger data sets with more disease classes to obtain higher accuracy. 
+
+[19]\emph{ Vishal Deshwal, Mukta Sharma,” Breast Cancer Detection using SVM Classifier with Grid Search Technique”, International Journal of Computer Applications (0975 – 8887) Volume 178 – No. 31, July 2019} 
+
+The authors of this paper used Grid search to present a model for predicting breast cancer using Support Vector Machine. The first Support vector machine model is evaluated without a grid search. The Support vector machine model is then evaluated using grid search. Finally, a comparison study was performed, and a new model was created based on the results. The new model is based on a grid search of data before fitting it for prediction, improving the outcome and yielding significantly better results than a standard SVM model. It can be observed that the correct parameter values for C and gamma are crucial for a given quantity of data. This model may also be used to provide predictions for other illnesses which can work as a decision-support system in the healthcare sector.
+
+[20] \emph{S. Sathyavathi, S. Kavitha, R. Priyadharshini and A. Harini, “Breast Cancer Identification Using Logistic Regression” Biosci.Biotech.Res. Comm. Special Issue Vol 13 No 11 (2020)}
+
+The authors of this paper have led a progression of examination based on machine learning models to improve breast cancer classification for the given data set. They have indicated that the logistic regression method applied to the training dataset shows promising results. The accuracy is measured, and the confusion matrix is plotted using seaborn and sklearn metrics. This model achieves an accuracy of 97.63\%. However, increased data in the data set can be provided, and accuracy can be improved.
+
+[21]\emph{ Prof. Ajit N.Gedam, Kajol B. Deshmane, Nishigandha N.Jadhav, Ritul M.Adhav, Akanksha N.Ghodake,” Breast Cancer Detection using Logistic Regression Algorithm”, International Journal of Innovative Research in Science, Engineering and Technology (IJIRSET), Volume 11, Issue 5, May 2022.}
+
+The authors of this paper used Logistic Regression for Breast Cancer Detection. It was observed that the logistic regression method had an accuracy of more than 94\% in determining whether the cancer was benign or malignant. The results show that combining multidimensional data with various classification, feature selection, and dimensionality reduction strategies might give beneficial tools for inference in this area. More study on this topic is needed to enhance the efficiency of classification systems so that they can predict more variables.
+
+[22]\emph{R. D. Ghongade and D. G. Wakde, "Computer-aided diagnosis system for breast cancer using RF classifier" 2017 International Conference on Wireless Communications, Signal Processing and Networking (WiSPNET), 2017, pp. 1068-1072 }
+
+To identify the area of concern and identify anomalies in monogram images, the author employed a CAD system. The method employed in the paper is to locate and categorize tumors using digital monograms.  the data had been preprocessed using a Gaussian filter and an adaptive histogram equalization approach for smoothening of image and improving contrast. Otsu's approach is used for segmentation for extorting malignant tumors. Features are extracted using GLCM. The best features that will increase the efficiency of the algorithm are chosen using FCBF. In order to classify, RF is used as the classifier. For Evaluation of the result  Confusion Matrix, F measure, and Receiver operating characteristic curve are used. The result has a 97.44 true positive rate and 98.13 \% true negative rate and an accuracy 97.32\% . By lowering the False Positive and False Negative, the result demonstrates that RF classifier enhances classification. This is valuable for radiologists in detecting malignant tumors in digital monograms
+
+[23]\emph{Z. Huang and D. Chen, "A Breast Cancer Diagnosis Method Based on VIM Feature Selection and Hierarchical Clustering Random Forest Algorithm," in IEEE Access, vol. 10, pp. 3284-3293, 2022 }
+
+The proposed method in the paper is Hierarchical Clustering Random Forest (HCRF) for classification and Variable Importance Measure(VIM), which involves feature selection based on the Gini Index. The parameters of our model are selected using the grid search algorithm. Datasets utilized for the study include Wisconsin Breast Cancer (WBC) and Wisconsin Diagnosis Breast Cancer (WDBC). From the specified training set, several different training subsets are created using the bootstrap sampling technique.  The trees that share similarities are grouped, and the similarity between each new tree is once more calculated. In the end, we choose the decision tree from  each cluster that has the highest area under the curve and discard the others. The developed model performs better when compared to other classifiers such as decision tree, and Adaboost. The Selected Tree for Random Forest are of low similarity.On the WDBC dataset, our suggested technique achieves 97.05 \% accuracy, and on the WBC dataset, it achieves 97.76\% accuracy.
+
+
+
+[24]\emp{S. Murugan, B. M. Kumar and S. Amudha, "Classification and Prediction of Breast Cancer using Linear Regression, Decision Tree and Random Forest," 2017 International Conference on Current Trends in Computer, Electrical, Electronics and Communication (CTCEEC), 2017, pp. 763-766}
+
+They have employed a variety of classification techniques, including linear regression. Decision tree and Random forest. The UCI Machine Learning Repository provided the Data Set (Wisconsin Breast Cancer). The goal of the research is to determine whether a tumor is benign or malignant and whether or not it is curable at that time. The dependent, independent, and other qualities are regressed with one another in the case of linear regression, and the resulting result has a success of 84.15\%. All observation is provided to the decision tree the most common outcome is considered as output. The new observation again provides all decision trees. It takes the most opted option for all classification models. RF classification has a success rate of 88.14\%.
+
+
+[25]\emph{S. Kabiraj et al., "Breast Cancer Risk Prediction using XGBoost and Random Forest Algorithm," 2020 11th International Conference on Computing, Communication and Networking Technologies (ICCCNT), 2020, pp. 1-4}
+
+The research compares the results using two algorithms: Random Forest and XGBoost. From the UCI Machine Learning Repository, information was gathered. Trimmed means and modes had been employed for data preprocessing. This removes the data with extremely high and low values. 37\% of the data is used for testing and 67\% for training. The two aforementioned algorithms were then each applied separately. For the subset, RF employs bagging, and accuracy rises with tree count. The gradient boosting framework uses an algorithm called XGBoost that is based on decision trees. Calculations have been made for the F1 score, precision, the ability of the test to correctly identify those patients with the disease, and the ability of the test to correctly identify those patients without the disease. For Random Forest, their accuracy was 74.73\%, while for XGBoost, it was 73.63\%.
+
+
+[26]\emph{R. Fadil, A. Jackson, B. A. El Majd, H. El Ghazi and N. Kaabouch, "Classification of Microcalcifications in Mammograms using 2D Discrete Wavelet Transform and Random Forest," 2020 IEEE International Conference on Electro Information Technology (EIT), 2020, pp. 353-359}
+
+In the proposed model they suggest a method for locating Microcalcifications, tiny calcium apatite crystals that, despite their small size and low contrast, are the first indication of breast cancer. A coded contour is available with an image containing microcalcification denoting the area of their presence. An automated method employing discrete wavelet transform and random forest for segmenting and categorizing breast microcalcifications in mammograms (DWT-RF). The Digital Database for Screening Mammography has 966 mammography images divided into three categories: normal, normal, malignant, and benign. To enhance, mammography images were first put through a two-dimensional discrete wavelet transform. The tissue surrounding the microcalcification is removed using the maximum entropy approach. The sequential forward features selection procedure is used to minimize the set of features after the features are chosen using GLCM.
+Following that, Random Forest is used and a grid search was used to determine the parameters. It was trained using 10-fold cross-validation. In comparison to previous models, this one has a 95\% accuracy rate and a 3\% false positive rate.
+
+[27]\emph{L. Liu, "Research on Logistic Regression Algorithm of Breast Cancer Diagnose Data by Machine Learning," 2018 International Conference on Robots & Intelligent Systems (ICRIS), 2018, pp. 157-160 }
+
+For classification in the paper, we used the Sklearn Library's logistic regression. In a short amount of training time, this approach offers a strong prediction. The Wisconsin breast Cancer Data Set serves as the source of the data set. Malignancy is directly correlated with tumor size and texture, according to a dispersed plot. With mean radius and texture, logistic regression is 90.48\% accurate, whereas it is 96.5\% accurate with maximum texture and maximum radius. Utilizing machine learning, is a quick method of detecting cancer.
+
+
+[28]\emph{B. Dai, R. -C. Chen, S. -Z. Zhu and W. -W. Zhang, "Using Random Forest Algorithm for Breast Cancer Diagnosis," 2018 International Symposium on Computer, Consumer and Control (IS3C), 2018, pp. 449-452
+}
+
+The Random Forest Algorithm was used in the paper to classify breast cancer cases. Here, the characteristics of various Eigenvalues and the output of different decision trees have been combined using Random Forest to increase accuracy. Sampling is done by bagging, and then we create decision trees using the CART algorithm. When separating nodes, they employ the Gini coefficient technique. The result that trees produce and the outcomes that they deliver after being trained are independent of one another. To provide results, many week classifiers are combined. It has an accuracy of 95\%.
+
+
+[29]\emph{H. Rajaguru and S. K. Prabhakar, "Expectation maximization based logistic regression for breast cancer classification," 2017 International conference of Electronics, Communication and Aerospace Technology (ICECA), 2017, pp. 603-606}
+
+The dataset used in the proposed paper was sourced from the Kuppuswamy Naidu Hospital in Coimbatore, India. Data is gathered from hospital charts, pathology reports, and other sources. To identify and categorize breast cancer, the paper used  Expectation Maximization (EM) Based Logistic Regression (LR). The 82 cancer patients are analyzed and sorted based on factors such as the family history of breast cancer, breast nipple position, nipple level, lump location and size, menstrual cycle, dietary habits, general habits, number of abortions, menopause, breastfeeding, overall health hygiene, etc. Beginning with the conversion of metadata into data, the EM based logistic Regression Result  is used to compare different TNM stages by Chi Square Test method. The benchmark parameters considered here are Perfect Classification Measures, Missed Classification Measures, False Alarm measures, etc. The result of EM-based logistic regression showed average accuracy of 92%.
+
+
+[30]\emph{  Amrita Sanjay †, H Vinayak Nair, Sruthy Murali, Krishnaveni K S∗A Data Mining Model To Predict Breast Cancer Using Improved Feature Selection Method On Real Time Data doi:10.1109/ICACCI.2018.8554450
+}
+
+The authors use Recursive Elimination, Unvariant Selection, Univarient  Selection to present data processing results on various phase classifiers.
+Phase 0 uses attributes like  Family tree, Breast Feeding, OCP, Axillary lymph node status, Ultrasonography (USG), Mammogram, True Cut Biopsy, Biopsy, HER2 status, ER, Diagnosis which gives features on patient details.
+Phase 1 uses Gaussian DB and sci-kit modules on BCDS.The data set (BCDS) is organized into attributes and class label when used in the classifier.
+Phase 1 is checked using measures like TN,FN,TP,FP.
+Phase 2 uses a mathematical function called Chi-Squared which is a statistical test to extract important features. Recursive Function is used to remove the lowest ranked features and new prominent contours are obtained.
+Phase 3 uses  both Uni-variate Selection method and Recursive Elimination method to extract important documentations in order to have a higher relevance value.
+The data is then fed to the Naive Bayes Gaussian model to obtain a comparative study.
+This method reaches an Accuracy and Precision score of over 84 percent and have a computational run-time of around 10 seconds.
+
+[31]\emph{ Tawseef Ayoub ,Shaikh Rashid Ali
+Combating Breast Cancer by an Intelligent Ensemble Classifier Approach doi:10.1109/BSB.2018.8770684}
+
+The authors use an intelligent ensemble techniques like SMO, RF and iBK.Five individual classifiers Naive Bayes, SVM, Simple Logistics, Random Forest and iBK.
+The classifier algorithms perform better when multiple algorithms are used in a singular simulation compared to seperate simulations.
+The paper introduces a classifier mix-up using WEKA and BCDA. Combining input classifiers with Logistics brings out a holistic approach to process and evaluate the data.Integrating several classifiers boosts the performance and the foundational capabilities of the model for future calculations.
+Stacking ensemble algorithms together give SMO the highest accuracy of 83 percent.
+
+[32]\emph{ Yogesh Suresh Deshmukh , Parmalik Kumar , Rajneesh Karan , Sandeep K. Singh Breast Cancer Detection-Based Feature Optimization Using Firefly Algorithm and Ensemble Classifier doi:10.1109/ICAIS50930.2021.9395788}
+
+The authors propose using the firefly algorithm to decrease the variances in breast cancer mammogram scans.The algorithms performance is tested against known parameters like  accuracy, specificity, sensitivity, and MCC which reveals that it produces better results than  DWPT, SVM and BMC.
+CAD Software is used which seperates the scans into CT and MRI results.
+The scans after being classified into benign and malignant can be sorted and used to perform deliberations
+Wavelet packet techniques are used to overcome the flaws persent in the firefly ensemble algorithm. The algorithm is tested on two datasets which are MIAS and DDSM.
+The authors use CNN features like flattening and dropping to understand the depth perception of the obtained model . The CNN model is passed through a feature matrix which and divide the sample set into scaffolds.
+The firefly algorithm is then used to the run test cases on feature value and parameters like Neighbours.
+Several features like Sensitivity, Specificity and Accuracy can be derived after processing.
+It produces an accuracy of over 85 percent
+
+
+
+
+% ==================
+% # IV. CONCLUSION #
+% ==================
+
+\section{Conclusion}
+By Reviewing different machine learning algorithms for the prediction of breast cancer, This study establishes our main focus to find out the most suitable algorithm that can predict the occurrences of breast cancer more effectively. 
+The main purpose of this review is to highlight all the previous studies of machine learning algorithms that are being used for breast cancer prediction like Naive Bayes
+(NB), K-Nearest Neighbor (KNN), and Logistic Regression
+(LR),Random Forest (RF), Support Vector Machine (SVM),
+and Decision Tree (DT), for computing accuracy in terms of
+performance metrics such as recall, precision F1 score, and
+accuracy percentage. 
+
+
+This survey paper analyzes how the use of Neural Networks can affect changes in the reports obtained from analysis of various datasets . When exposed to a Neural Network the ensemble methodologies give a holistic approach and make the data more understandable. This article will be helpful to the researchers due to the detailed analysis of different methodologies and in conducting further investigations.
+
+
+% ==================
+% # ACKNOLEDGMENTS #
+% ==================
+
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+% The authors would like to thank...
+
+
+% ==============
+% # REFERENCES #
+% ==============
+
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,biblio_traps_dynamics}
+
+[1]\emph{ Nur Syami, Ismael,C. Sovuthy 
+"Breast Cancer Detection Using Deep Learning" doi:10.1109/EnCon.2019.8861256}
+
+[2]\emph{ Hajer Kamel, Dhahir Abdulah,Jamal M.Al-Tuwaijari  
+"Cancer Classification Using Gaussian Naive Bayes Algorithm"  doi:10.1109/IEC47844.2019.8950650}
+
+[3]\emph{ Megha Rathi, Arun Kumar Singh
+"Breast Cancer Prediction using Naïve Bayes Classifier" International Journal of Information Technology & Systems, Vol. 1; No. 2: ISSN: 2277-9825 (July-Dec. 2012)}
+
+ [4]\emph{ Tawseef Ayoub Shaikh , Rashid Ali
+"A CAD Tool for Breast Cancer Prediction using Naive Bayes Classifier" doi:10.1109/ESCI48226.2020.9167568}
+
+[5]\emph{Shubham Sharma,  Archit Aggarwal, Tanupriya Choudhury 
+"Breast Cancer Detection Using Machine Learning Algorithms " doi:10.1109/CTEMS.2018.8769187}
+
+ 
+ [6]Than Than Htay,Su Su Maung,
+"Early Stage Breast Cancer Detection System using GLCM Feature extraction and K-nearest Neighbor on Mammography image," 
+2018 18th International Symposium on Communications and Information Technologies (ISCIT),IEEE Xplore.doi:10.1109/ISCIT.2018.8587920
+
+[7]Tevar Durgadevi Murugan,Mahendra G.Kanojia,
+"Breast Cancer Detection Using Texture Features and KNN Algorithm,"
+In:HIS 2020-Part of the Advances in Intelligent Systems and Computing book series (AISC,volume 1375),Springer.doi:10.1007/978-3-030-73050-5-77
+
+[8] Suhas Athani, Shreesha Joshi, B. Ashwath Rao, Shwetha Rai , N. Gopalakrishna Kini,"Parallel Implementation of kNN Algorithm for Breast Cancer Detection,"Advances in Intelligent Systems and Computing, vol 1176,Springer.doi:10.1007/978-981-15-5788-0-46
+
+[9] Youssef Aamer, Yahya Benkaouz, Mohammed Ouzzif, Khalid Bouragba,
+"A new approach for increasing K-nearest neighbors performance,"
+2020 8th International Conference on Wireless Networks and Mobile Communications (WINCOM),IEEE Xplore.doi:10.1109/WINCOM50532.2020.9272459
+
+[10] G. D. Rashmi, A. Lekha, Neelam Bawane,
+"Analysis of Efficiency of Classification and Prediction Algorithms (kNN) for Breast Cancer Dataset,"
+Advances in Intelligent Systems and Computing, vol 434,Springer.doi:10.1007/978-81-322-2752-6-18
+
+
+[11]Sonia Goyal , Maheshwar,
+"Naïve Bayes Model Based Improved K-Nearest Neighbor Classifier for Breast Cancer Prediction,"
+ICAICR 2019. Communications in Computer and Information Science, vol 1075,Springer.doi:10.1007/978-981-15-0108-1-1
+
+[12]Nur Atiqah Hamzah, Sabariah Saharan , Khuneswari Gopal Pillay
+"Classification Tree of Breast Cancer Data with Mode Value for Missing Data Replacement,"
+Proceedings of the 7th International Conference on the Applications of Science and Mathematics 2021,Springer.doi:10.1007/978-981-16-8903-1-25
+
+[13]Hamim, M., El Moudden, I., Moutachaouik, H., Hain, M,
+"Decision Tree Model Based Gene Selection and Classification for Breast Cancer Risk Prediction,"
+Communications in Computer and Information Science, vol 1207,Springer.doi:10.1007/978-3-030-45183-7-12
+
+[14]\emph{ Kriti Jain, Megha Saxena and Shweta Sharma: “Breast Cancer Diagnosis Using Machine Learning Techniques”, IJISET - International Journal of Innovative Science, Engineering & Technology, Vol. 5 Issue 5, May 2018.}
+
+
+[15]\emph{ Puneet Yadav, Rajat Varshney, Vishan Kumar Gupta: “Diagnosis of Breast Cancer using Decision Tree Models and SVM”. IJISET - International Journal of Innovative Science, Engineering & Technology, Volume: 05 Issue: 03  Mar-2018 }
+
+
+[16]\emph{ Yixuan Li, Zixuan Chen, 2018: “Performance Evaluation of Machine learning methods for breast cancer prediction”, Science publishing group 2018. 
+Doi: 10.11648/j.acm.20180704.15}
+
+
+[17]\emph{ Thomas Noel, Hiba Asri, Hajar Mousannif, Hassan Al Moatassime, 2016, “Using Machine Learning Algorithms for Breast Cancer Risk Prediction and Diagnosis”, Elsevier B.V. 2016.}
+
+
+[18]\emph{ Mohammed Amine Naji , Sanaa El Filalib, Kawtar Aarikac, EL Habib Benlahmard, Rachida Ait Abdelouhahide, Olivier Debauchef “Machine Learning Algorithms For Breast Cancer Prediction And Diagnosis”, Elsevier August 9-12, 2021 }
+
+
+[19]\emph{ Vishal Deshwal, Mukta Sharma,” Breast Cancer Detection using SVM Classifier with Grid Search Technique”, International Journal of Computer Applications (0975 – 8887) Volume 178 – No. 31, July 2019 Doi: 10.5120/ijca2019919157}
+
+
+[20] \emph{S. Sathyavathi, S. Kavitha, R. Priyadharshini and A. Harini, “Breast Cancer Identification Using Logistic Regression” Biosci.Biotech.Res. Comm. Special Issue Vol 13 No 11 (2020) Doi: http://dx.doi.org/10.21786/bbrc/13.11/8}
+
+
+[21]\emph{ Prof. Ajit N.Gedam, Kajol B. Deshmane, Nishigandha N.Jadhav, Ritul M.Adhav, Akanksha N.Ghodake,” Breast Cancer Detection using Logistic Regression Algorithm”, International Journal of Innovative Research in Science, Engineering and Technology (IJIRSET), Volume 11, Issue 5, May 2022. Doi: 10.15680/IJIRSET.2022.1104129}
+
+[22] \emph{R. D. Ghongade and D. G. Wakde, "Computer-aided diagnosis system for breast cancer using RF classifier," 2017 International Conference on Wireless Communications, Signal Processing and Networking (WiSPNET), 2017, pp. 1068-1072, doi: 10.1109/WiSPNET.2017.8299926}
+
+[23] \emph{Z. Huang and D. Chen, "A Breast Cancer Diagnosis Method Based on VIM Feature Selection and Hierarchical Clustering Random Forest Algorithm," in IEEE Access, vol. 10, pp. 3284-3293, 2022, doi: 10.1109/ACCESS.2021.3139595.}
+
+[24] \emp{S. Murugan, B. M. Kumar and S. Amudha, "Classification and Prediction of Breast Cancer using Linear Regression, Decision Tree and Random Forest," 2017 International Conference on Current Trends in Computer, Electrical, Electronics and Communication (CTCEEC), 2017, pp. 763-766, doi: 10.1109/CTCEEC.2017.8455058}
+
+[25] \emph{S. Kabiraj et al., "Breast Cancer Risk Prediction using XGBoost and Random Forest Algorithm," 2020 11th International Conference on Computing, Communication and Networking Technologies (ICCCNT), 2020, pp. 1-4, DOI: 10.1109/ICCCNT49239.2020.9225451.}
+
+[26]\emph{R. Fadil, A. Jackson, B. A. El Majd, H. El Ghazi and N. Kaabouch, "Classification of Microcalcifications in Mammograms using 2D Discrete Wavelet Transform and Random Forest," , doi: 10.1109/EIT4899 }
+
+[27] \emph{L. Liu, "Research on Logistic Regression Algorithm of Breast Cancer Diagnose Data by Machine Learning," 2018 International Conference on Robots & Intelligent Systems (ICRIS), 2018, pp. 157-160, doi: 10.1109/ICRIS.2018.00049.}
+
+[28] \emph{B. Dai, R. -C. Chen, S. -Z. Zhu and W. -W. Zhang, "Using Random Forest Algorithm for Breast Cancer Diagnosis," 2018 International Symposium on Computer, Consumer and Control (IS3C), 2018, pp. 449-452, doi: 10.1109/IS3C.2018.00119.
+}
+
+
+[29] \emph{H. Rajaguru and S. K. Prabhakar, "Expectation maximization based logistic regression for breast cancer classification," 2017 International conference of Electronics, Communication and Aerospace Technology (ICECA), 2017, pp. 603-606, doi: 10.1109/ICECA.2017.8203608.}
+
+[30]\emph{  Amrita Sanjay , H Vinayak Nair, Sruthy Murali, Krishnaveni K S∗A Data Mining Model To Predict Breast Cancer Using Improved Feature Selection Method On Real Time Data doi:10.1109/ICACCI.2018.8554450
+}
+
+
+[31]\emph{ Tawseef Ayoub ,Shaikh Rashid Ali
+Combating Breast Cancer by an Intelligent Ensemble Classifier Approach doi:10.1109/BSB.2018.8770684}
+
+[32]\emph{ Yogesh Suresh Deshmukh , Parmalik Kumar , Rajneesh Karan , Sandeep K. Singh Breast Cancer Detection-Based Feature Optimization Using Firefly Algorithm and Ensemble Classifier doi:10.1109/ICAIS50930.2021.9395788}
+
+
+
+\end{document}

@@ -1,0 +1,499 @@
+\documentclass[conference]{IEEEtran}
+   
+  	\usepackage[pdftex]{graphicx}
+  	\graphicspath{{../pdf/}{../jpeg/}}
+	\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.jpg}
+
+	\usepackage[cmex10]{amsmath}
+	\usepackage{mathabx}
+	\usepackage{algorithmic}
+	\usepackage{array}
+	\usepackage{mdwmath}
+	\usepackage{mdwtab}
+	\usepackage{eqparbox}
+	\usepackage{url}
+	\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+
+\title{\textbf {\huge A Sophisticated Ambulance Escort System }}
+\author{{\textbf{\large Kiran L,$^1$ Akash R,$^1$ Shakthi Mahendra T,$^1$ 
+  Swaroopa,$^1$ Prof. Muquitha Almas,$^1$ }}\\ 
+  \textit{$^1$Department of Computer Science and Engineering, Dayananda Sagar College of Engineering, Bangalore, India} \\
+  \email{1DS20CS411@dsce.edu.in, 1DS20CS400@dsce.edu.in,  1DS20CS419@dsce.edu.in,\\ 1DS20CS422@dsce.edu.in,
+  almas-cs@dayanandasagar.edu}}
+
+
+% \makeatother
+% \author{
+%   \IEEEauthorblockN{Mrs. Muquitha Almas }
+%   \IEEEauthorblockA{\textit{Department of Computer Science} \\
+%     \textit{Dayananda Sagar College of}\\ Engineering \\
+%     Bangalore, India\\
+%     almas-cs@dayanandasagar.edu}
+%   \and
+%   \IEEEauthorblockN{ Kiran L}
+%   \IEEEauthorblockA{\textit{Department of Computer Science} \\
+%     \textit{Dayananda Sagar College of}\\ Engineering \\
+%     Bangalore, India \\
+%    kiranrevanna1@gmail.com }
+%   \and
+%   \IEEEauthorblockN{Akash R}
+%   \IEEEauthorblockA{\textit{Department of Computer Science} \\
+%     \textit{Dayananda Sagar College of}\\ Engineering \\
+%     Bangalore, India \\
+%     akashsurya2000@gmail.com}
+%   \linebreakand % <------------- \and with a line-break
+%   \IEEEauthorblockN{Shakthi Mahendra T}
+%   \IEEEauthorblockA{\textit{Department of Computer Science} \\
+%     \textit{Dayananda Sagar College of}\\ Engineering \\
+%     Bangalore, India \\
+%     shakthimahendrat@gmail.com}
+%   \and
+%   \IEEEauthorblockN{\textsuperscript{} Swaroopa}
+%   \IEEEauthorblockA{\textit{Department of Computer Science} \\
+%     \textit{Dayananda Sagar College of}\\ Engineering \\
+%    Bangalore, India \\
+%     swaroopanaglapur@gmail.com}
+% }
+
+\maketitle
+\begin{abstract} 
+Ambulatory services frequently become delayed at intersections because of gridlock or timed traffic signals. As a result, the ambulatory services could move more slowly or it might stay in its required place. A collision or a clog in the traffic might occur if the ambulance ever attempts to ignore an indication. Automated traffic control systems are suggested as a solution to this issue. A precise, cost-effective solution to save lives is what the system has been constructed to do when an approaching ambulatory services approaches; the system employs intelligent objects to recognize its siren, and it then stops traffic in other lanes of the junction to clear the way for the ambulatory services to pass.
+
+
+Traffic congestion delays are responsible for 20\% of emergency patient deaths each year. More than 50\% of heart attack patients arrive at the hospital too late. The biggest problem is that nobody responds until the ambulance arrives, which makes it challenging for the ambulance to get where it needs to. In order to reduce these death rates. In today's society, traffic, as the primary worry, is causing several challenges in everyday life. Apart from the usual difficulties of congestion, it seriously impedes the proper operation of ambulatory services. The rest of the automobiles must yield to ambulatory services. However, ambulatory services frequently miss their scheduled arrival times owing to unanticipated events or selfish drivers. Ambulatory services' tardy arrival may put lives at jeopardy.
+
+We developed a hybrid application to book the closest ambulance in order to decrease the time needed to travel from the ambulance stand-alone area to the location of the rescue patient.\\
+
+\end{abstract}
+
+\IEEEoverridecommandlockouts
+\begin{keywords}
+\textbf{Keywords:} AI/ML, Congestion Control, IOT's, Ambulance detection, Hybrid Application, Escort System, Lo-Ra.
+
+\end{keywords}
+
+\IEEEpeerreviewmaketitle
+
+
+% ===================
+% # I. Introduction #
+% ===================
+
+\section{Introduction}
+The primary problem in today's society, traffic, is causing many issues for everyday living. In addition to the usual congestion problems, it seriously impairs the ability of ambulatory services to operate normally. ambulatory services must be given priority over all other vehicles, but they frequently fail to arrive at their destinations on time due to unforeseen circumstances or selfish drivers. A life threat could arise from ambulatory services arriving late. 
+A technology that can identify the ambulatory services before it reaches the intersection and clear the traffic in front of it must exist, it would seem. This may cut down on the delays and help in an emergency. In most nations, including India, there are sadly no effective actions done to address this issue. Therefore, ambulatory services may either disregard the signal or continue to operate as usual. There is a considerable likelihood of accidents occurring if ambulatory services override the traffic signal. The IOT's, which offers an effective way to handle these difficulties, is a result of recent technological advancements. Automated traffic control systems can help prevent the problems that ambulatory services encounter.
+
+Every lane of a given crossroads has one or more smart object(s) installed. These object(s) are made to detect the incoming ambulatory service's siren, which activates a camera to take pictures. After that, the camera analyses the images to decide whether or not the vehicle is an ambulatory service. If the automobile is identified as an ambulatory service, the signal is delivered to the hybrid system. Hybrid System may shift traffic by identifying the lane that the ambulatory services is about to enter. The other signal lights at the intersection are all red.
+
+Automation entails the substitution of material or mechanical components for people. These components or robots use artificial intelligence to do tasks that people do. Because of the heavy traffic in cities, ambulances cannot get at the location fast. In most countries, police escorts are used to create place for ambulances. Utilizing technology is preferred over expending human energy or effort. As a kind of technology, we use artificially intelligent systems. Open a number of robotics programmed. Verbal commands and signals are used to signal the autos. Delays in traffic can lower the fatality rate. Systems might take the role of police escorts. Efficiency is increased by using AI for system control and obstacle avoidance. Utilizing AI technology reduces the demand for human.
+
+The traffic must be cleared in front of the ambulatory services using a mechanism that detects it before it arrives at the intersection. In an emergency, this might help people in need and save time. An intelligent traffic control system's primary objective is to minimise traffic-related delays by guaranteeing a smooth flow so that ambulances may get at hospitals on time. The traffic in Indian cities nowadays is one of the biggest problems. Despite the fact that there are more automobiles on the roads every day, the development of the city's infrastructure and roads has lagged behind expectations. The control of traffic signals is essential for avoiding gridlock.
+
+% =======================================================
+% #Literature Survey
+% =======================================================
+
+\section{Literature Survey}
+[1]\emph{ S. Javaid, A. Sufian, S. Pervaiz and M. Tanveer, ”Smart
+traffic management system using Internet of Things,” 2018
+20th International Conference on Advanced Communication
+Technology (ICACT), Chuncheon, Korea (South), 2018, pp. 1-
+1, doi: 10.23919/ICACT.2018.8323769. }
+
+ The recommended approach offers a proactive mechanism to deal with the issue with the traffic light whenever it is compromised while it is in operation, in addition to directing ambulances to take the fastest routes to their destinations. To illustrate the advantages of the suggested technique over previous alternatives, various situations that represent the actual roads and vehicle movements are modeled using a simulated environment (the Cup Carbon simulator).
+Drawback: One can think about directions, various priorities for various situations, and scenarios. The primary concern with  Io T's is its overall security.
+
+
+
+[2]\emph{ Z. Xie, Y. Wu, J. Gao, C. Song, W. Chai and
+J. Xi, ”Emergency obstacle avoidance system of driverless vehicle based on model predictive control,” 2021
+International Conference on Advanced Mechatronic Systems (ICAMechS), Tokyo, Japan, 2021, pp. 22-27, doi:
+10.1109/ICAMechS54019.2021.9661515. }
+
+ In this study, RF-ID, image processing, and WSN are all used to compare various traffic signal control techniques. This study shows the RF-ID technology most effective method for managing traffic lights for ambulatory care.
+Cons: While many RF-ID devices can be read from a distance of 1,500 feet (460 metres) or more thanks to the use of signal repeaters, most can only be read from a distance of 300 feet (90 metres), which is the limit for RF-ID reading. Because we had to install more hardware, it cost more than we had anticipated.
+
+
+[3]\emph{ A. Chowdhury, ”Priority based and secured traffic management system for emergency vehicle using IoT,” 2016 International Conference on Engineering MIS (ICEMIS), Agadir,
+Morocco, 2016, pp. 1-6, doi: 10.1109/ICEMIS.2016.7745309.}
+
+Numerous studies find that the Office of the Treasury's intended journey time for ambulatory services is not reached. To effectively handle this issue, an innovative ITS system that considers the priorities of ambulatory services based on the nature of the event is required, as well as a method for recognising and reacting to traffic signal hacking.
+
+[4]\emph{ Y. Su, H. Cai and J. Shi, ”An improved realistic mobility model and mechanism for VANET based on
+SUMO and NS3 collaborative simulations,” 2014 20th IEEE
+International Conference on Parallel and Distributed Systems (ICPADS), Hsinchu, Taiwan, 2014, pp. 900-905, doi:
+10.1109/PADSW.2014.7097905. }
+
+The GPS will be used embedded on the devices used by the driving applicants, that's advantageous to determine the traffic density utilising the traffic control. Highway users can clear the way by turning associated lights to green before the rescue vehicle arrives at the signal within the allotted 10 minutes by checking the route of each ambulatory services they will get to bring it to the hospital of choice.
+
+
+[5]\emph{ Y. -S. Huang, Y. -S. Weng and M. Zhou, ”Design of Traffic Safety Control Systems for Emergency Vehicle Preemption
+Using Timed Petri Nets,” in IEEE Transactions on Intelligent
+Transportation Systems, vol. 16, no. 4, pp. 2113-2120, Aug.
+2015, doi: 10.1109/TITS.2015.2395419.}
+
+Utilizing a light-based communication system, an ambulatory services's headlight will signal the car in front of it, and this process will continue until the ambulatory services reaches upon reaching the signal, the light will turn green. The sole foundation of this system is an LIFI system, that has a number of advantages over many other technologies.
+The receiver needs be installed in every car, which is a drawback since it is expensive and there is a danger that the link may fail.
+
+% =============================================
+% # III. Validation of modelling and consistency 
+% =============================================
+
+\section{Validation of modelling and consistency }
+
+[6]\emph{ R. V. R, S. Pragdesh P, D. R. S and S. D, ”Automatic
+Traffic Clearance for Emergency Vehicles,” 2022 3rd International Conference on Electronics and Sustainable Communication Systems (ICESC), Coimbatore, India, 2022, pp. 1132-
+1138, doi: 10.1109/ICESC54411.2022.9885603. }
+
+A peripheral interface controller-programmed traffic light controller with a priority system for ambulatory services. In emergency scenarios, ambulatory services like ambulances can cause traffic light signals will immediately morph from red to green. Radio Frequency (RF) technology will enable the traffic signal function to resume after the ambulance has finished crossing the road. The findings show that the design has a response range of 55 metres.
+Problem with RF:
+1. The range of the proposed system is too short for real-life situations.
+2. Prepubescent children, expectant mothers, elderly people, pacemaker patients, tiny birds, and people with pacemakers are all affected by the uncontrolled radiation of RF.
+
+[7]\emph{S. Saravanan, ”Implementation of efficient automatic
+traffic surveillance using digital image processing,” 2014 IEEE
+International Conference on Computational Intelligence and
+Computing Research, Coimbatore, India, 2014, pp. 1-4, doi:
+10.1109/ICCIC.2014.7238419.}
+
+A technique that may be used to find ambulatory services using sirens. The recommended approach may be used to detect an ambulatory services siren by placing smart devices utilising long-range, low-power Lo-Ra near the intersection. The eventual resetting of traffic lights after ambulatory services have left the site is made possible by the deployment of sound detecting sensors.
+The system can't manage deadlock situations, which is a drawback.
+
+[8]\emph{ S. R. Kazemee, M. S. Mahmud, Y. Rahman, M. A. R.
+Khan, B. B. Pathik and M. Kabiruzzaman, ”Design and Implementation an IoT Based Smart Traffic System Using Renewable
+Energy Sources,” 2022 2nd International Conference on Image
+Processing and Robotics (ICIPRob), Colombo, Sri Lanka,
+2022, pp. 1-6, doi: 10.1109/ICIPRob54042.2022.9798731.
+}
+
+It gathers and transmits information from EVs to the roadside units using cutting-edge technology, GPS, including IOT's Sensors, 5G, and Cloud Computing (RSU). The suggested strategy was assessed using mathematical modelling. The findings demonstrate that the EVMS can drastically shorten EV travel times while preserving regular automobiles' performance.
+Cons: The suggested system is not financially viable since it incorporates 5G technology, cloud computing, and IOT's sensors.
+
+
+[9]\emph{ L. Jacome, L. Benavides, D. Jara, G. Riofrio, F. ´
+Alvarado and M. Pesantez, ”A Survey on Intelligent Traffic
+Lights,” 2018 IEEE International Conference on Automation/XXIII Congress of the Chilean Association of Automatic
+Control (ICA-ACCA), Concepcion, Chile, 2018, pp. 1-6, doi:
+10.1109/ICA-ACCA.2018.8609705. }
+
+Traffic congestion, a static control system could hinder ambulatory services. Because they can monitor traffic and ease congestion on the roads, WSN have attracted increasing interest. For moving vehicles, the typical wait times (AWTs) at crossings. To track real-time traffic, researchers are increasingly deploying WSN, Infrared signals, VANETs, Bluetooth devices,  RF-IDs, Cameras, and ZigBee. .
+Analysis of the drawbacks: It could be interesting to investigate the use of PLCs and SCADA systems in intelligent transportation systems for smooth traffic flow.
+
+ [10]\emph{  G A. K. Mittal and D. Bhandari, ”A novel approach
+to implement green wave system and detection of stolen
+vehicles,” 2013 3rd IEEE International Advance Computing
+Conference (IACC), Ghaziabad, India, 2013, pp. 1055-1059,
+doi: 10.1109/IAdCC.2013.6514372. }
+Technology that "provides a green way path" and changes every red light into a green one to provide access to any ambulatory services. Along with the green wave path, this will also follow a stolen automobile through a traffic light. This tracking system runs without a battery, unlike previous tracking devices. This is accomplished using the GSM, quick microcontrollers, & RF-ID technology.
+Backdraw: The suggested system's range is insufficient for use in practical applications.
+
+[11]\emph{ Bin Zeng and Lu Yao, ”Study of vehicle monitoring
+application with wireless sensor networks,” 11th International
+Conference on Wireless Communications, Networking and
+Mobile Computing (WiCOM 2015), Shanghai, 2015, pp. 1-4,
+doi: 10.1049/cp.2015.0747.
+}
+
+The system uses three parts to find and follow moving things. The first part comprises low-cost, off-the-shelf wireless sensor gadgets, such as MicaZ motes, that can detect magnetic and auditory signals produced by moving objects. Real-time tests are necessary to determine whether a particle filtering method based on the Bayesian TBD estimator method is a promising candidate for target recognition and tracking with WSNs. Despite being resource-efficient, it has a significant propagation latency.
+
+[12]\emph{ B. Ghazal, K. ElKhatib, K. Chahine and M. Kherfan,
+”Smart traffic light control system,” 2016 Third International
+Conference on Electrical, Electronics, Computer Engineering
+and their Applications (EECEA), Beirut, Leban }
+
+In this research, a PIC microcontroller-based system is suggested that generates dynamic time slots with different levels and detects traffic density using IR sensors. The issue of ambulatory services becoming trapped on congested highways is also addressed by the development of a portable controller device.
+Back there: 1. Limited range and support for shorter ranges are two IR-based systems.
+2. Be impeded by everyday objects.
+3. The rate of data transfer is poor.
+4. Can be affected by external conditions like sunshine, pollution, rain, fog, dust, and so forth.
+
+[13]\emph{ K. -H. Chen, C. -R. Dow, D. -J. Lin, C. -W.
+Yang and W. -C. Chiang, ”An NTCIP-based Semantic
+ITS Middleware for Emergency Vehicle Preemption,” 2008
+11th International IEEE Conference on Intelligent Transportation Systems, Beijing, China, 2008, pp. 363-368, doi:
+10.1109/ITSC.2008.4732608. }
+
+Such an automated system cannot be provided since interoperability and performance are not currently being significantly explored in ITS middleware research. The Bevor ITS middleware for ambulatory services preemption based on ITS is suggested. NTC-IP protocols are used for communication layer of Bevor to achieve communicating information and data consistency across the majority of equipment and devices. Web 3.0 architecture and XML interchange used in the development of Bevor's Service Layer make it simple to access semantic data and carry out operations like event detection, policy matching, and other related activities.
+Compared to the modern technologies supplied by languages, the technology and procedures utilised in this study are outdated, which results in low accuracy and efficiency.
+
+[14]\emph{ A. Buchenscheit, F. Schaub, F. Kargl and M. Weber,
+”A VANET-based emergency vehicle warning system,” 2009
+IEEE Vehicular Networking Conference (VNC), Tokyo, Japan,
+2009, pp. 1-8, doi: 10.1109/VNC.2009.5416384. }
+
+The video analysis and the rationale show that travels in reaction to emergencies might seriously jeopardize traffic safety. With the use of VANET technology, such operations may be safer and faster, possibly even saving lives. If governmental agencies equipped all traffic signals and ambulatory care in a region with onboard units, the uses detailed in this article would be immediately beneficial to every motorist who purchased an on-board device for their car with receivers and relays. 
+Limitation: Prior to that, a few technical problems required to be fixed; these problems will be the subject of our continuous work. The system's scalability, security, and privacy are further concerns that must be resolved.
+
+[15]\emph{ M. Mousa, M. Abdulaal, S. Boyles and C. Claudel,
+”Wireless Sensor Network-Based Urban Traffic Monitoring
+Using Inertial Reference Data,” 2015 International Conference on Distributed Computing in Sensor Systems, Fortaleza,
+Brazil, 2015, pp. 206-207, doi: 10.1109/DCOSS.2015.21.
+}
+
+A detailed analysis of current urban traffic control strategies has been conducted. To understand the objectives of urban traffic management, it is necessary to analyze the key difficulties with congestion control, average waiting time reduction, providing ambulatory services priority, and the design needs of intelligent traffic systems. Despite several research initiatives and notable advancements in traffic management systems over the past few years, there are still problems that need to be tackled.
+
+[16]\emph{ R. Sundar, S. Hebbar and V. Golla, ”Implementing
+Intelligent Traffic Control System for Congestion Control,
+Ambulance Clearance, and Stolen Vehicle Detection,” in IEEE
+Sensors Journal, vol. 15, no. 2, pp. 1109-1113, Feb. 2015, doi:
+10.1109/JSEN.2014.2360288.}
+
+Fewer contacts with humans are required because the entire system is automated. A message notification is sent and a sign rings when a stolen automobile is discovered, alerting any nearby intersections. ambulatory services such as ambulances must finish their tasks as soon as feasible. If they concentrate a lot of their efforts on congested roads. As soon as the crisis vehicle is freed, the activity becomes green, and the ambulatory vehicle is still standing in the intersection. The framework is currently implemented by using street one as the activity intersection's street. Given how valuable ZIGBEE modules are for organising remote sensors, they may eventually incorporate them into framework revisions.
+
+[17]\emph{ J. R. Srivastava and T. S. B. Sudarshan, ”Intelligent traffic management with wireless sensor networks,”
+2013 ACS International Conference on Computer Systems and
+Applications (AICCSA), Ifrane, Morocco, 2013, pp. 1-4, doi:
+10.1109/AICCSA.2013.6616429. }
+
+The work that is being presented aims to make a junction more flexible to the existing traffic congestion at the junction by reducing the average width between automobiles at a junction. The AWT at a junction can be decreased by employing the techniques suggested and assessed in this study using the Green Light District Simulator (GLD). They come to the conclusion that our system is much more flexible and efficient than the conventional approach. The simulation results may already be used to a real-time WSN architecture. They believe that this strategy can help save on fuel. A traffic control system may also be provided by the Intelligent Traffic System and other technologies like RF-ID, GPRS, and GPS.
+
+[18]\emph{ S. S. P. Moka, S. M. Pilla and S. Radhika, ”Real
+Time Density Based Traffic Surveillance System Integrated
+with Acoustic Based Emergency Vehicle Detection,” 2020 4th
+International Conference on Computer, Communication and Signal Processing (ICCCSP), Chennai, India, 2020, pp. 1-7,
+doi: 10.1109/ICCCSP49186.2020.9315209. }
+
+The traffic density is calculated using digital image processing techniques, and ambulatory services are located using signal processing methods. The entire proposed model is represented with the proper schematics, and hardware implementation verifies the results. The process starts with the gathering of images and audio, continues with skillful edge identification and sound reduction using a LMS filter, and then assigns green signals to the lanes based on the outcome results.
+
+[19]\emph{ S. Sarath and L. R. Deepthi, ”Priority Based Real Time
+Smart Traffic Control System Using Dynamic Background,”
+2018 International Conference on Communication and Signal
+Processing (ICCSP), Chennai, India, 2018, pp. 0620-0622,
+doi: 10.1109/ICCSP.2018.8524501. } 
+
+An image processing was proposed in this study to give all ambulatory services high priority and allow them to safely navigate the traffic signal. This helps them to go to the emergency spot swiftly and so save the lives of others nearby. This is performed using Image processing techniques for pre-processing. In an later effort, they intend to include more ambulatory services qualities to enhance the detection.
+
+[20] \emph{ D. J. Rumala, A. Kurniawan, E. M. Yuniarno
+and K. Salehin, ”An IoT Application for Smart Navigation of High Priority Vehicles (HPVs) Using Preemptive
+Traffic-Light Control,” 2020 International Conference on
+Computer Engineering, Network, and Intelligent Multimedia (CENIM), Surabaya, Indonesia, 2020, pp. 193-198, doi:
+10.1109/CENIM51130.2020.9297872. }
+
+Simulating traffic for high priority autos was done in this study through TRA-CI's TCP based design, SUMO is reachable. As a server, SUMO is in charge of putting the simulation together. The simulation is subsequently taken over by an external component. The client must initiate and terminate connections with SUMO. The model continually aids at every intersections while switching to green for it when requested. Simulation results show that the recommended strategy can drastically shorten the distance an ambulance must drive, allowing it to arrive sooner. In this study, ambulance was emphasised as an HPV.
+
+[21]\emph{ H. Xie, S. Karunasekera, L. Kulik, E. Tanin, R.
+Zhang and K. Ramamohanarao, ”A Simulation Study of
+Emergency Vehicle Prioritization in Intelligent Transportation
+Systems,” 2017 IEEE 85th Vehicular Technology Conference
+(VTC Spring), Sydney, NSW, Australia, 2017, pp. 1-5, doi:
+10.1109/VTCSpring.2017.8108282. }
+
+They replicate an intelligent transportation system at the microscopic level in this study, in which ambulatory services broadcast particular info about the itineraries to passing automobiles and lights. According to the analysis, broadcasting the route information can significantly cut down on how long it takes ambulatory services to arrive. The difference in travel time between ambulatory services and non-priority cars may only be 37.1\% in some cases.
+
+[22]\emph{ P. Soleimani, M. R. B. Marvasti and P. Ghorbanzadeh,
+”A Hybrid Traffic Management Method Based on Combination
+of IOV and VANET Network in Urban Routing for Emergency
+Vehicles,” 2020 4th International Conference on Smart City,
+Internet of Things and Applications (SCIOT), Mashhad, Iran,
+2020, pp. 58-65, doi: 10.1109/SCIOT50840.2020.9250198. }
+
+ They provide a solution to get beyond VANETs' technology limitations and handle larger ecosystems for emergencies. In order to overcome communication impediments and provide ambulatory services with a safe and secure route to their destination, the hybrid model—which combines IOV and VANET—combines IOV and VANET. Based on the findings from the four assessment criteria, it was concluded that the suggested technique was superior to the V2V method and had given outcomes that were acceptable.The findings show that in terms of throughput, End-to-End latency,  PDR, and bandwidth, the AO-DV protocol-based method performs at its peak.
+ 
+[23]\emph{ S. Amir, M. S. Kamal, S. S. Khan and K. M. A. Salam,
+”PLC based traffic control system with emergency vehicle
+detection and management,” 2017 International Conference
+on Intelligent Computing, Instrumentation and Control Technologies (ICICICT), Kerala, India, 2017, pp. 1467-1472, doi:
+10.1109/ICICICT1.2017.8342786. }
+
+The ambulatory services Detection and Management System. Firstly simulating, then testing a prototype. The prototype achieved the desired outcomes since the simulated outcomes exactly matched the idea. The results showed that the emergency algorithm is capable of maintaining the system's state before the beginning of an protocol. Technology may be put to use in actual life situations. When the system is further developed, adaptive control may be incorporated into the timing sequence, enabling it to adjust each route's time sequence based on how much traffic is travelling along it, so offering congestion control.
+
+[24]\emph{ T. Sarapirom and S. Poochaya, ”Detection and Classification of Incoming Ambulance Vehicle using Artificial
+Intelligence Technology,” 2021 18th International Conference
+on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON), Chiang Mai, Thailand, 2021, pp. 18-21, doi: 10.1109/ECTICON51831.2021.9454821. }
+
+The strategies utilized to shorten EV reaction times have been outlined and contrasted in this paper. Although they still require significant improvements, optimization and preemption can help shorten response times. Researchers studying emergency management services are advised to concentrate on using real time dynamic traffic information to make optimization more dynamic and taking time into account as a key optimization factor. Furthermore, they need to make preemption intelligent and use advanced technologies like VANET.. Such preventative measures must guarantee that they have the least possible impact on other traffic. The most sophisticated optimization and pre-emption should be combined in future studies. Thus, the difficult task of lowering response time will be accomplished.
+
+[25]\emph{ C. Shekhar and S. Saha, ”IoT-Assisted Low-Cost
+Traffic Volume Measurement and Control,” 2022 14th International Conference on COMmunication Systems NETworkS
+(COMSNETS), Bangalore, India, 2022, pp. 806-811, doi:
+10.1109/COMSNETS53615.2022.9668354. }
+
+The various intelligent traffic management technologies were looked at in this article. These included connecting wirelessly to big data centers and employing cellphones, Green Wave Systems, RF-ID readers, and tags. Each method's applications, benefits, and drawbacks were covered in concise summaries. IOT's technology has been used to more efficiently and precisely collect data relating to traffic. Additionally, a mobile app was suggested an  "User Interface" to identify traffic congestion in various locations and offer user's detours. These techniques aim to better inform drivers of moving vehicles about traffic information and road conditions. Furthermore, smart traffic systems could be used to assign ambulatory services a priority.
+
+[26]\emph{ O. Avatefipour and F. Sadry, ”Traffic Management
+System Using IoT Technology - A Comparative Review,”
+2018 IEEE International Conference on Electro/Information
+Technology (EIT), Rochester, MI, USA, 2018, pp. 1041-1047,
+doi: 10.1109/EIT.2018.8500246. }
+
+According to this poll, emergency management service researchers should concentrate on using real-time traffic data to make optimum response times more dynamic. Furthermore, only one of the three strategies—which have only been evaluated in simulations and are challenging to implement commercially—is taken into account in the majority of recent research. To tackle the difficult task of reducing response time, future research should combine a variety of approaches. As a result, there is a big opportunity and need for more thorough study to reduce the negative effects of EVs and conventional cars while still making a substantial contribution to emergency services. This study examines the most recent traffic management techniques to speed up reaction times when EVs are moving. It divides traffic management tactics into four categories: routes that are optimised, signals that are preempted, lanes that are reserved, and multimodal traffic control techniques The literature on traffic control techniques utilising different algorithms is then thoroughly reviewed.
+
+[27]\emph{ T. Chowdhury, S. Singh and S. M. Shaby, ”A Rescue
+System of an advanced ambulance using prioritized traffic
+switching,” 2015 International Conference on Innovations in
+Information, Embedded and Communication Systems (ICIIECS), Coimbatore, India, 2015, pp. 1-5, doi: 10.1109/ICIIECS.2015.7193161. }
+
+The assessment of traffic density and the detection of ambulatory services using IR and GPS-based methods are described. Here, the two goals—first, determining the vehicle density on the road to ensure smooth traffic flow Second, developing priority-based signalling to help provide ambulatory services while avoiding congestion priority—are effectively examined. When correctly planned, implemented, and maintained, this traffic signal management strategy offers a number of advantages, including reduced congestion and reduced fuel usage. By preventing traffic congestion and accidents, this system hopes to avoid wasting a lot of Human intervention hours that might be utilized to protect people and property. It can control priority emergencies. 
+Flaw: Since the density of the vehicles varies from vehicle to vehicle, the information provided by the system could not be correct. This might not work in some scenarios.
+
+[28]\emph{ W. Yu, W. Bai, W. Luan and L. Qi, ”State-of-the-Art
+Review on Traffic Control Strategies for Emergency Vehicles,”
+in IEEE Access, vol. 10, pp. 109729-109742, 2022, doi:
+10.1109/ACCESS.2022.3213798.
+}
+In order to pass ambulatory services without incident, this study provides an intelligent traffic controlling system. To scan the RF-ID tags affixed to the car, they employed an RF-ID reader, and a system on chip. Additionally, it establishes network congestion and, consequently, the length of time that path has a green signal. For wireless communication between the ambulance and traffic controller, this module employs ZigBee modules on this system. 
+
+[29]\emph{ C. S. Lim, R. Mamat and T. Braunl, ”Impact of
+Ambulance Dispatch Policies on Performance of Emergency
+Medical Services,” in IEEE Transactions on Intelligent Transportation Systems, vol. 12, no. 2, pp. 624-632, June 2011, doi:
+10.1109/TITS.2010.2101063. }
+Using an Arduino-based gadget that sends and receives radio frequency (RF) signals, they put the ETL Control System into practice. It addresses some of the issues with comparable technologies (such as strobe lights and MIRT) and will give ambulatory services faster response times and more secure access to traffic signals. The ETL system could undergo a variety of improvements. Like entails incorporating a part into the system that will assist in gathering statistics.
+
+[30]\emph{ R. Sundar, S. Hebbar and V. Golla, ”Implementing
+Intelligent Traffic Control System for Congestion Control,
+Ambulance Clearance, and Stolen Vehicle Detection,” in IEEE
+Sensors Journal, vol. 15, no. 2, pp. 1109-1113, Feb. 2015, doi:
+10.1109/JSEN.2014.2360288.
+ }
+explains the brand-new protocol and platform known as EVP STC, which has three primary systems. The intersection controller, which was the first system, is installed at traffic signals and collects information on the number of vehicles and the placement of ambulatory care facilities along each road segment that leads to a junction. The junction controller then adjusts the timing of the traffic lights based on the detected real time traffic. The second system is installed at each road segment and uses force-resistive sensors to identify cars. The detected data is sent to the intersection controller through ZigBee. A third system is deployed in intersections to avoid ambulatory services from having to wait there. This system provides GPS coordinates to the intersection controller.
+Limitations: This approach is unable to resolve urgent problems like deadlock.
+
+% =======================================================
+% #Proposed System
+% =======================================================
+
+\section{Proposed System}
+All ambulatory services in India have preset siren sounds that have a consistent rhythm. Two tones of the siren sound are repeated. The tones, which are repeated every 1.3 seconds, are 960 Hz and 770 Hz. The Doppler Effect has an impact on the siren sound, which changes in frequency as the ambulatory services moves. The suggested system comprises two phases of operation. The first part entails finding the ambulatory services, and the second phase entails acting at the junction. The sound detection sensor, camera, and micro controller are all utilized by the system to process the data. The suggested system communicates using Lora technology. In order to compare the current ambulatory services with an data set, the smart object will store a data collection of various ambulatory service patterns. The smart item will have a camera attached, and it will be strategically placed to only record the necessary area of the route. 
+
+At first, the smart object detects an ambulatory service on the road by The smart object, which is located 200 metres from the signal junction, will use a sound detection sensor to identify the emergency car's siren sound if it is moving in the direction of the signal. The smart object's next procedure involves comparing the moving item on the road to the data set that has been saved. As soon as the smart item hears a sound, the camera will be configured to start taking photographs of the moving cars on the road. Smart objects communicate with the hybrid System located at the Signal Junction if both requirements are met. Making a choice is the second process. The hybrid System will be built together with the signal junction. The smart items installed on the several roadways that will meet in the junction and send signals to this system, which then receives them. The star topology will be used to organize all of the intelligent objects and Hybrid systems.\\
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/1213.JPG}
+    \caption{Scenario}
+    \label{fig:2}
+\end{figure}
+
+\textbf{Hybrid application API : }
+
+There will be an application for the ambulance. The ambulance driver can use that application to record the emergency. When the ambulance approaches the signal, the visual processing will then be able to determine where it is originating from. All of the signals will be turned off and blocked from operating properly, with the exception of the one that the ambulance needs to pass through. The traffic signal control system will be connected to your application so that the entries may be stored in the database. Connect the image processing to the traffic signals as well. Additionally, we must learn how to manipulate signals. GPS Unit : Global System for Mobile Communication, sometimes known as GPS Module, is an acronym. Cellular technology that has been digitized is used to transmit voice and data services for mobile devices. A gadget called GPS is particularly useful for following moving objects and pinpointing. The overall design of this system for information transmission and accident detection. GPS is used to identify latitude and longitude, while GSM is used to text the rescue team. Using EEPROM, the message receiver number is pre-stored. It also gives the option to block deceptive communications. Voltage is created when a piezo, an electronic device, is physically bent by vibration, mechanical strain, and sound wave.\\
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/UD.jpg}
+    \caption{Working Sequence}
+    \label{fig:2}
+\end{figure}
+
+\textbf{AI – Deduction System Methodology :}
+
+Methodology of the AI-Deduction System Using cameras that are already present at the site as an input, the system can recognize the ambulance based on its image. This analyzes the image that is updated in real-time using AI that has been trained to recognize the ambulance using a set of pretrained photos and compares them with the real-time data model to determine whether it is indeed an ambulance. A genuine ambulance is also connected to the system, and when it approaches, it sounds its siren to signal an emergency. We have an AI-based ambulance detection system that just uses the YOLO as a library, and we coupled the built-in features that the YOLO already has with the functionalities we wrote. Based on the packet's arrival and source address, the decision support system decides whether to clear the lane. Once the sound-detection sensor has transmitted the message, the traffic signal resumes its regular function. \\
+
+\textbf{Hybrid Application Methodology : }
+
+Using the hybrid software, the ambulance driver may also determine the shortest path to the relevant hospital., saving both the patient's life and the driver's time. The hybrid was created using the React native language, along with certain front-end technologies, including HTML, Tailwind, and Bootstrap. The back-end was created using Graphql Yoga, and the database utilized was a Non-SQL database. It was released to the Play store. We have included the GPS module by utilizing Google Maps API Iconic to access Google to locate the ambulance in Real-Time by the hospital as well as by the Hybrid System.\\ 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/1.JPG}
+    \caption{Approach Overview}
+    \label{fig:2}
+\end{figure}
+
+\textbf{IOT's Siren Detection System Methodology : }
+
+The sensors and gateway are linked together using LoRa technology. Transmission of digital wireless data utilising the LoRa (long range) protocol. A whole new wireless standard has been developed specifically for reliable, low-power communications. M2M and IOT's networks are the main target markets for long range, or LoRa. Multiple apps running on the same network will be able to communicate with one another using this technology via public or multi-tenant networks. The most serious concerns facing our planet are addressed by smart IOT's applications made feasible by LoRa technology, encompassing catastrophe protection, efficient infrastructure, energy management, resource conservation, and more. The IOT's main building block, LoRa technology, is what gives the world its intelligence. Long range, low battery use, and secure data transfer are some of its enticing characteristics for IOT applications. The technology has a greater range than cellular networks and can be used in public, hybrid & private networks. Millions of nodes may be under the direction of a single LoRa gateway. Because signals can be sent over long distances with no infrastructure, creating a network is less expensive and simpler to install.Additionally, LoRa includes a variable data rate algorithm that increases network capacity and the battery life of the nodes. Encryption at the app, network, and device are among the layers of security offered by the LoRa protocol for communications. \\
+
+\textbf{Algorithm used}\\ 1) Start.\\ 2) Listen for an ambulatory services's sound. \\3) Set the camera if the frequencies are compatible. \\ 4) Take a vehicle-filled photo of the chosen road. \\ 5) Evaluate the picture against the data. \\ 6) Send the HS a message if the car and an ambulatory services are compatible. \\ 7) The sender address is checked by HS when it receives the message from the smart object. \\ 8) HS makes the correct decision by removing the requested smart item from the lane of travel.\\ 9) Proceed to step 7 in the event that there is any new message from the same or other smart objects.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figures/flow.JPG}
+    \caption{ Algorithm Work Flow}
+    \label{fig:2}
+\end{figure}
+
+
+% ==================
+% # CONCLUSION #
+% ==================
+
+\section{Conclusion}
+The most urgent problem that the technology is intended to solve is the delay of ambulatory services caused by stationary or slowly moving traffic. The recommended method can be used to recognise the sirens of a firetruck, ambulance, or police car. The reference articles examined during the literature study included sensors in every vehicle, which has a number of limitations. Additionally, a predetermined time period was created following the arrival of the ambulatory services before returning to regular operation. Using long-range, low-range LoRa and smart objects at the junction, the aforementioned issues are resolved in an affordable way. The traffic is monitored by the cloud-based decision support system, which also stores data there. Therefore, it is possible to retrieve this data and look through it to see where it may be improved. In order to switch to a bigger database, the storage system will dynamically extend the data's capacity, which should speed up access. Based on emerging technologies, the hybrid application's Ui may change in the future. We are able to construct an escort system for additional ambulatory services, including a fire truck and a police car.
+
+% ==============
+% # REFERENCES #
+% ==============
+\section{REFERENCES}
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEabrv,biblio_traps_dynamics}
+
+[1]\emph{ S. Javaid, A. Sufian, S. Pervaiz and M. Tanveer, "Smart traffic management system using Internet of Things," 2018 20th International Conference on Advanced Communication Technology (ICACT), Chuncheon, Korea (South), 2018, pp. 1-1, doi: 10.23919/ICACT.2018.8323769. }
+
+[2]\emph{ Z. Xie, Y. Wu, J. Gao, C. Song, W. Chai and J. Xi, "Emergency obstacle avoidance system of driverless vehicle based on model predictive control," 2021 International Conference on Advanced Mechatronic Systems (ICAMechS), Tokyo, Japan, 2021, pp. 22-27, doi: 10.1109/ICAMechS54019.2021.9661515. }
+
+[3]\emph{ A. Chowdhury, "Priority based and secured traffic management system for emergency vehicle using IoT," 2016 International Conference on Engineering & MIS (ICEMIS), Agadir, Morocco, 2016, pp. 1-6, doi: 10.1109/ICEMIS.2016.7745309.}
+
+ [4]\emph{ Y. Su, H. Cai and J. Shi, "An improved realistic mobility model and mechanism for VANET based on SUMO and NS3 collaborative simulations," 2014 20th IEEE International Conference on Parallel and Distributed Systems (ICPADS), Hsinchu, Taiwan, 2014, pp. 900-905, doi: 10.1109/PADSW.2014.7097905.}
+
+[5]\emph{  Y. -S. Huang, Y. -S. Weng and M. Zhou, "Design of Traffic Safety Control Systems for Emergency Vehicle Preemption Using Timed Petri Nets," in IEEE Transactions on Intelligent Transportation Systems, vol. 16, no. 4, pp. 2113-2120, Aug. 2015, doi: 10.1109/TITS.2015.2395419. }
+ 
+[6]\emph{ R. V. R, S. Pragdesh P, D. R. S and S. D, "Automatic Traffic Clearance for Emergency Vehicles," 2022 3rd International Conference on Electronics and Sustainable Communication Systems (ICESC), Coimbatore, India, 2022, pp. 1132-1138, doi: 10.1109/ICESC54411.2022.9885603. }
+
+[7\emph{ S. Saravanan, "Implementation of efficient automatic traffic surveillance using digital image processing," 2014 IEEE International Conference on Computational Intelligence and Computing Research, Coimbatore, India, 2014, pp. 1-4, doi: 10.1109/ICCIC.2014.7238419. }
+
+[8] \emph{ S. R. Kazemee, M. S. Mahmud, Y. Rahman, M. A. R. Khan, B. B. Pathik and M. Kabiruzzaman, "Design and Implementation an IoT Based Smart Traffic System Using Renewable Energy Sources," 2022 2nd International Conference on Image Processing and Robotics (ICIPRob), Colombo, Sri Lanka, 2022, pp. 1-6, doi: 10.1109/ICIPRob54042.2022.9798731. }
+
+[9] \emph{ L. Jácome, L. Benavides, D. Jara, G. Riofrio, F. Alvarado and M. Pesantez, "A Survey on Intelligent Traffic Lights," 2018 IEEE International Conference on Automation/XXIII Congress of the Chilean Association of Automatic Control (ICA-ACCA), Concepcion, Chile, 2018, pp. 1-6, doi: 10.1109/ICA-ACCA.2018.8609705. }
+
+[10] G\emph{ A. K. Mittal and D. Bhandari, "A novel approach to implement green wave system and detection of stolen vehicles," 2013 3rd IEEE International Advance Computing Conference (IACC), Ghaziabad, India, 2013, pp. 1055-1059, doi: 10.1109/IAdCC.2013.6514372. }
+
+
+[11]\emph{ Bin Zeng and Lu Yao, "Study of vehicle monitoring application with wireless sensor networks," 11th International Conference on Wireless Communications, Networking and Mobile Computing (WiCOM 2015), Shanghai, 2015, pp. 1-4, doi: 10.1049/cp.2015.0747. }
+
+[12]\emph{ B. Ghazal, K. ElKhatib, K. Chahine and M. Kherfan, "Smart traffic light control system," 2016 Third International Conference on Electrical, Electronics, Computer Engineering and their Applications (EECEA), Beirut, Lebanon, 2016, pp. 140-145, doi: 10.1109/EECEA.2016.7470780.}
+
+[13\emph{ K. -H. Chen, C. -R. Dow, D. -J. Lin, C. -W. Yang and W. -C. Chiang, "An NTCIP-based Semantic ITS Middleware for Emergency Vehicle Preemption," 2008 11th International IEEE Conference on Intelligent Transportation Systems, Beijing, China, 2008, pp. 363-368, doi: 10.1109/ITSC.2008.4732608. }
+
+[14]\emph{ A. Buchenscheit, F. Schaub, F. Kargl and M. Weber, "A VANET-based emergency vehicle warning system," 2009 IEEE Vehicular Networking Conference (VNC), Tokyo, Japan, 2009, pp. 1-8, doi: 10.1109/VNC.2009.5416384. }
+
+
+[15]\emph{ M. Mousa, M. Abdulaal, S. Boyles and C. Claudel, "Wireless Sensor Network-Based Urban Traffic Monitoring Using Inertial Reference Data," 2015 International Conference on Distributed Computing in Sensor Systems, Fortaleza, Brazil, 2015, pp. 206-207, doi: 10.1109/DCOSS.2015.21. }
+
+
+[16]\emph{ R. Sundar, S. Hebbar and V. Golla, "Implementing Intelligent Traffic Control System for Congestion Control, Ambulance Clearance, and Stolen Vehicle Detection," in IEEE Sensors Journal, vol. 15, no. 2, pp. 1109-1113, Feb. 2015, doi: 10.1109/JSEN.2014.2360288. }
+
+
+[17]\emph{ J. R. Srivastava and T. S. B. Sudarshan, "Intelligent traffic management with wireless sensor networks," 2013 ACS International Conference on Computer Systems and Applications (AICCSA), Ifrane, Morocco, 2013, pp. 1-4, doi: 10.1109/AICCSA.2013.6616429.}
+
+
+[18]\emph{ S. S. P. Moka, S. M. Pilla and S. Radhika, "Real Time Density Based Traffic Surveillance System Integrated with Acoustic Based Emergency Vehicle Detection," 2020 4th International Conference on Computer, Communication and Signal Processing (ICCCSP), Chennai, India, 2020, pp. 1-7, doi: 10.1109/ICCCSP49186.2020.9315209. }
+
+
+[19]\emph{ S. Sarath and L. R. Deepthi, "Priority Based Real Time Smart Traffic Control System Using Dynamic Background," 2018 International Conference on Communication and Signal Processing (ICCSP), Chennai, India, 2018, pp. 0620-0622, doi: 10.1109/ICCSP.2018.8524501. }
+
+
+[20] \emph{ D. J. Rumala, A. Kurniawan, E. M. Yuniarno and K. Salehin, "An IoT Application for Smart Navigation of High Priority Vehicles (HPVs) Using Preemptive Traffic-Light Control," 2020 International Conference on Computer Engineering, Network, and Intelligent Multimedia (CENIM), Surabaya, Indonesia, 2020, pp. 193-198, doi: 10.1109/CENIM51130.2020.9297872. }
+
+
+[21] \emph{ H. Xie, S. Karunasekera, L. Kulik, E. Tanin, R. Zhang and K. Ramamohanarao, "A Simulation Study of Emergency Vehicle Prioritization in Intelligent Transportation Systems," 2017 IEEE 85th Vehicular Technology Conference (VTC Spring), Sydney, NSW, Australia, 2017, pp. 1-5, doi: 10.1109/VTCSpring.2017.8108282.
+}
+
+[22] \emph{ P. Soleimani, M. R. B. Marvasti and P. Ghorbanzadeh, "A Hybrid Traffic Management Method Based on Combination of IOV and VANET Network in Urban Routing for Emergency Vehicles," 2020 4th International Conference on Smart City, Internet of Things and Applications (SCIOT), Mashhad, Iran, 2020, pp. 58-65, doi: 10.1109/SCIOT50840.2020.9250198.}
+
+[23] \emph{ S. Amir, M. S. Kamal, S. S. Khan and K. M. A. Salam, "PLC based traffic control system with emergency vehicle detection and management," 2017 International Conference on Intelligent Computing, Instrumentation and Control Technologies (ICICICT), Kerala, India, 2017, pp. 1467-1472, doi: 10.1109/ICICICT1.2017.8342786.}
+
+[24] \emp{ T. Sarapirom and S. Poochaya, "Detection and Classification of Incoming Ambulance Vehicle using Artificial Intelligence Technology," 2021 18th International Conference on Electrical Engineering/Electronics, Computer, Telecommunications and Information Technology (ECTI-CON), Chiang Mai, Thailand, 2021, pp. 18-21, doi: 10.1109/ECTI-CON51831.2021.9454821. }
+
+[25] \emph{ C. Shekhar and S. Saha, "IoT-Assisted Low-Cost Traffic Volume Measurement and Control," 2022 14th International Conference on COMmunication Systems & NETworkS (COMSNETS), Bangalore, India, 2022, pp. 806-811, doi: 10.1109/COMSNETS53615.2022.9668354. }
+
+[26]\emph{ O. Avatefipour and F. Sadry, "Traffic Management System Using IoT Technology - A Comparative Review," 2018 IEEE International Conference on Electro/Information Technology (EIT), Rochester, MI, USA, 2018, pp. 1041-1047, doi: 10.1109/EIT.2018.8500246.
+}
+
+[27] \emph{ T. Chowdhury, S. Singh and S. M. Shaby, "A Rescue System of an advanced ambulance using prioritized traffic switching," 2015 International Conference on Innovations in Information, Embedded and Communication Systems (ICIIECS), Coimbatore, India, 2015, pp. 1-5, doi: 10.1109/ICIIECS.2015.7193161. }
+
+[28] \emph{ W. Yu, W. Bai, W. Luan and L. Qi, "State-of-the-Art Review on Traffic Control Strategies for Emergency Vehicles," in IEEE Access, vol. 10, pp. 109729-109742, 2022, doi: 10.1109/ACCESS.2022.3213798. }
+
+
+[29] \emph{ C. S. Lim, R. Mamat and T. Braunl, "Impact of Ambulance Dispatch Policies on Performance of Emergency Medical Services," in IEEE Transactions on Intelligent Transportation Systems, vol. 12, no. 2, pp. 624-632, June 2011, doi: 10.1109/TITS.2010.2101063.}
+
+[30]\emph{ R. Sundar, S. Hebbar and V. Golla, "Implementing Intelligent Traffic Control System for Congestion Control, Ambulance Clearance, and Stolen Vehicle Detection," in IEEE Sensors Journal, vol. 15, no. 2, pp. 1109-1113, Feb. 2015, doi: 10.1109/JSEN.2014.2360288. }
+
+[31]\emph{ N. Al-Ostath, F. Selityn, Z. Al-Roudhan and M. El-Abd, "Implementation of an emergency vehicle to traffic lights communication system," 2015 7th International Conference on New Technologies, Mobility and Security (NTMS), Paris, France, 2015, pp. 1-5, doi: 10.1109/NTMS.2015.7266494.}
+
+[32]\emph{ A. Khan, F. Ullah, Z. Kaleem, S. Ur Rahman, H. Anwar and Y. -Z. Cho, "EVP-STC: Emergency Vehicle Priority and Self-Organising Traffic Control at Intersections Using Internet-of-Things Platform," in IEEE Access, vol. 6, pp. 68242-68254, 2018, doi: 10.1109/ACCESS.2018.2879644.}
+
+\end{document}
